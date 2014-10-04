@@ -6,11 +6,11 @@
 ### Running the presentation from a notebook server:
 
 1.  To create the certificate:
-    ```bash
+    ```
     openssl req -x509 -nodes -days 365 -newkey rsa:1024 -keyout mycert.pem -out mycert.pem
     ```
 2.  Create new ipython profile for serving over the network:
-    ```bash
+    ```
     ipython profile create notebook_web
     ```
     Now edit `~/.ipython/profile_notebook_web/ipython_notebook_config.py` to add the line
@@ -24,21 +24,21 @@
     ```
 
 3.  Running the server (use the correct IP address and port):
-    ```bash
+    ```
     ipython notebook --no-browser --ip=10.65.82.56 --port 9999 --certfile=mycert.pem --profile notebook_web
     ```
 
 ### Running the presentation from a pre-created html:
 
 1.  Convert the notebook to html:
-    ```bash
+    ```
     ipython nbconvert Gold_Code_Correlations.ipynb --to=slides
     ```
 2.  Make sure there is a copy of [reveal.js](https://github.com/hakimel/reveal.js) next to the resulting html:
-    ```bash
+    ```
     git clone https://github.com/hakimel/reveal.js.git
     ```
 3.  Give access to all that by http:
-    ```bash
+    ```
     python -m SimpleHTTPServer 8000
     ```
