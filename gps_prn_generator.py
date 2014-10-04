@@ -44,7 +44,7 @@ CODES = {1: {'CA_G2i':Code(10, (2, 6),   5, 10, '1440'), 'P':Code(12, ( 1,),  1,
         37: {'CA_G2i':Code(10, (4,10), 950, 10, '1713'), 'P':Code(12, (37,), 37, 12, '4343')}}
 
 def bitLenCount(int_type):
-    """total number of bits and number of set (1) bits in a binary representatino of int_type"""
+    """total number of bits and number of set (1) bits in a binary representation of int_type"""
     length = 0
     count = 0
     while (int_type):
